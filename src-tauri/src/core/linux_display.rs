@@ -5,6 +5,8 @@
 //! back to X11 (XWayland) in exactly that setup, unless the user already
 //! chose a backend via `GDK_BACKEND`.
 
+#![cfg_attr(not(target_os = "linux"), allow(dead_code))]
+
 /// Snapshot of the display environment relevant to backend selection.
 #[derive(Debug, Clone, Copy)]
 pub(crate) struct DisplayEnv<'a> {
